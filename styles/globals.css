@@ -1,3 +1,7 @@
+@import url("swiper/css");
+@import url("swiper/css/navigation");
+@import url("swiper/css/pagination");
+
 html,
 body {
   padding: 0;
@@ -22,5 +26,54 @@ a {
   body {
     color: white;
     background: black;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #000 !important;
+}
+.swiper-button-next {
+  /* background-color: #ffffff !important;
+  border-radius: 50px;
+  padding: 17px 19px 17px 19px; */
+}
+
+.swiper-button-prev {
+}
+
+.swiper-button-next {
+  color: #000;
+}
+
+.swiper-button-next {
+  background-image: url("../assets//images//Right.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  border-radius: 50px;
+}
+.swiper-button-prev {
+  background-image: url("../assets//images//Left.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  border-radius: 50px;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+.product-image {
+  width: 400px;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .product-image {
+    width: 150px;
+    height: 150px;
   }
 }

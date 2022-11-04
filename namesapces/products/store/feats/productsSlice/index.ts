@@ -33,6 +33,13 @@ export const productSlice = createSlice({
       }
       state.products = action.payload;
     },
+    productLoading: (state) => {
+      if (state.loading) {
+        state.loading = false;
+      } else {
+        state.loading = true;
+      }
+    },
   },
 });
 

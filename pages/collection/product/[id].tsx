@@ -1,13 +1,18 @@
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Layout from "../../../components/shared/Layout/Layout";
-import ProductComponent from "../../../namesapces/products/components/Product/Product.Component";
+import ProductView from "../../../namesapces/products/components/Product/Product.Container";
 
 export default function Product() {
-    const router = useRouter();
+    const router = useRouter()
     const { id } = router.query
+    useEffect(() => {
+    }, [])
     return (
         <Layout>
-            <ProductComponent />
+
+            {/* @ts-ignore */}
+            <ProductView productId={id} />
         </Layout>
     )
 }

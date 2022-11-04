@@ -9,10 +9,7 @@ export default function CollectionHeader({ title }: ICollectionHeaderProps) {
         <>
             <Styles.Title> FABLE OF {title}</Styles.Title>
             <Styles.FlexContainer>
-                <Styles.categoryTitle>Jackets </Styles.categoryTitle>
-                <Styles.Sorting>
-                    sorting
-                </Styles.Sorting>
+                <Styles.categoryTitle> {title} </Styles.categoryTitle>
             </Styles.FlexContainer>
         </>
     )

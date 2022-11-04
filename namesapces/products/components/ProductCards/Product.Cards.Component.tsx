@@ -19,11 +19,15 @@ export default function Cards({ products }: ICardProps) {
                                 href={`product/${product.id}`}
                             >
                                 <Image
-                                    className="product-image"
                                     alt={product.name}
                                     src={product.imageUrl}
-                                    width={400}
-                                    height={300}
+                                    width={500}
+                                    height={500}
+                                    style={{
+                                        width: "100%",
+                                        height: "100%"
+                                    }}
+
                                 />
                             </Link>
                         </Styles.CardImage>

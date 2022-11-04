@@ -9,7 +9,7 @@ export const CardsContainer = styled.div`
     display: grid;
     margin-left: 10px;
     margin-right: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -18,7 +18,13 @@ export const Card = styled.div`
   flex-direction: column;
 `;
 
-export const CardImage = styled.div``;
+export const CardImage = styled.div`
+  transition: 0.5s ease-in-out;
+  z-index: 10;
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
 
 export const ProductTitle = styled.p`
   font-weight: 500;

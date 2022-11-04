@@ -13,6 +13,9 @@ export const productConverter = {
       imageUrl: product.imageUrl,
       id: product.id,
       category: product.category,
+      colors: product.colors,
+      images: product.images,
+      sizes: product.sizes,
     };
   },
   fromFirestore(
@@ -26,6 +29,9 @@ export const productConverter = {
       imageUrl: data.imageUrl,
       id: data.id,
       category: data.category,
+      colors: data.colors,
+      images: data.images,
+      sizes: data.sizes,
     };
   },
 };

@@ -12,7 +12,6 @@ export default function Collection() {
                 <CollectionHeader title={id ? id : "Error"} />
             )
             }
-            SS
             <Cards />
         </Layout>
     )

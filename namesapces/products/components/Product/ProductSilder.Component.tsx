@@ -1,12 +1,13 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import jacket from "../../../../assets/images/jacket.png";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-// Import Swiper styles
 import Image from 'next/image';
 
 
-export default function ProductSlider() {
+interface IProductSliderProps {
+    images: string[];
+}
+
+export default function ProductSlider({ images }: IProductSliderProps) {
     return (
         <div
             style={{
@@ -28,7 +29,7 @@ export default function ProductSlider() {
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 2,
+                        slidesPerView: 1,
                         spaceBetween: 40,
                     },
                     1024: {
@@ -37,47 +38,23 @@ export default function ProductSlider() {
                     },
                 }}
             >
-                <SwiperSlide>
-                    <Image
-                        alt='jacket 1 '
-                        src={jacket}
-                        style={{
-                            width: "100%",
-                            height: "100%"
-                        }}
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        alt='jacket 1 '
-                        src={jacket}
-                        style={{
-                            width: "100%",
-                            height: "100%"
-                        }}
-                    />
+                {images.map((image, index) => {
+                    return (
+                        <SwiperSlide key={index}>
+                            <Image
+                                alt='jacket 1 '
+                                src={image}
+                                width={300}
+                                height={300}
+                                style={{
+                                    width: "100%",
+                                    height: "100%"
+                                }}
+                            />
+                        </SwiperSlide>
+                    )
+                })}
 
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        alt='jacket 1 '
-                        src={jacket}
-                        style={{
-                            width: "100%",
-                            height: "100%"
-                        }}
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        alt='jacket 1 '
-                        src={jacket}
-                        style={{
-                            width: "100%",
-                            height: "100%"
-                        }}
-                    />
-                </SwiperSlide>
             </Swiper>
         </div>
     )

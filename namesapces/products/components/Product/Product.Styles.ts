@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface IProductBoxColorProps {
   isActive?: boolean;
-  color: string;
+  color?: string;
 }
 
 export const siteMapWrapper = styled.div`
@@ -70,7 +70,12 @@ export const ProductColorBox = styled.div<IProductBoxColorProps>`
   width: 40px;
   height: 40px;
   background-color: ${(props) => props.color};
-  border: 1px solid ${(props) => (props.isActive ? "#000" : "")};
+  border: 1px solid;
+  transition: 0.5ms ease-in-out color;
+  border-color: ${(props) => (props.isActive ? "#000000" : " #8f8f8f")};
+  &:hover {
+    cursor: pointer;
+  }
   @media (max-width: 768px) {
     width: 25px;
     height: 25px;
@@ -90,16 +95,22 @@ export const ProductSizeBoxContainer = styled.div`
 `;
 
 export const ProductSizeBox = styled.div<IProductBoxColorProps>`
-  border: 1px solid ${(props) => (props.isActive ? "#000" : "")};
+  /* border: 1px solid ${(props) => (props.isActive ? "#0000" : "#0000")}; */
+  border: 1px solid;
+  border-color: ${(props) => (props.isActive ? "#000000" : " #8f8f8f")};
   font-weight: 400;
   font-size: 20px;
   line-height: 130%;
+  transition: 0.5ms ease-in-out color;
   text-align: center;
   color: #000000;
   padding: 10px 15px 10px;
-
+  /* background-color: ${(props) => (props.isActive ? "red" : "#ffffff")}; */
   @media (max-width: 768px) {
     padding: 5px;
+  }
+  &:hover {
+    cursor: pointer;
   }
 `;
 
@@ -134,4 +145,11 @@ export const ProductDescription = styled.p`
 export const ColumnWrapper = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const Center = styled.div`
+  display: flex;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;

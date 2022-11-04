@@ -4,4 +4,7 @@ export type IProduct = {
   imageUrl: string;
   name: string;
   price: number;
+  images: string[];
+  colors: string[];
+  sizes: string[];
 };

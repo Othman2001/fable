@@ -24,7 +24,7 @@ export const useCartActions = () => {
     dispatch(decrementQuantity(productId));
   };
   const changeDrawerVisibilityAction = ({
-    drawerVisibility: drawerVisibility,
+    drawerVisibility,
   }: {
     drawerVisibility: boolean;
   }) => {

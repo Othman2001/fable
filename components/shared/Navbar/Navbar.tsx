@@ -6,6 +6,7 @@ import * as Styles from "./Navbar.styles";
 import { Dropdown as AntDropDown } from 'antd';
 import type { MenuProps } from 'antd';
 import Link from "next/link";
+import { useCartState } from "../../../namesapces/cart/custom-hooks/useCartState";
 
 const items: MenuProps['items'] = [
     {
@@ -37,6 +38,7 @@ export default function Navbar() {
 
     const matches = useMediaQuery('(max-width: 768px)')
     const [isOpen, setIsOpen] = useState(false);
+    const { cartItems } = useCartState();
     return (
         <Styles.NavbarContainer >
             {!matches && (
@@ -51,18 +53,12 @@ export default function Navbar() {
 
             {!matches ? (
                 <Styles.ListWrapper isActive={isOpen}>
-                    <AntDropDown
-                        menu={{ items }}>
+                    <Link href="/collection/allCollection">
                         <Styles.ListItem>
                             Collections
                         </Styles.ListItem>
-                    </AntDropDown>
-                    <Styles.ListItem>
-                        CUSTOMIZER
-                    </Styles.ListItem>
-                    <Styles.ListItem>
-                        Sale
-                    </Styles.ListItem>
+                    </Link>
+
                 </Styles.ListWrapper>
             ) : (
                 <Styles.ListWrapper isActive={isOpen}>
@@ -77,9 +73,13 @@ export default function Navbar() {
 
 
             <Styles.ListWrapper isActive={false}>
-                <Styles.ListItem>
-                    Items
-                </Styles.ListItem>
+                <Link
+                    href="/checkout"
+                >
+                    <Styles.ListItem>
+                        Items {cartItems.length > 0 ? cartItems.length : null}
+                    </Styles.ListItem>
+                </Link>
                 <Styles.ListItem>
                     Profile
                 </Styles.ListItem>

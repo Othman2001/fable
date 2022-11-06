@@ -5,6 +5,7 @@ interface IProductBoxColorProps {
   color?: string;
 }
 
+export const Container = styled.div``;
 export const siteMapWrapper = styled.div`
   margin-left: 10px;
 `;
@@ -21,17 +22,24 @@ export const ProductViewContainer = styled.div`
   display: flex;
   gap: 30px;
   align-items: flex-start;
+  justify-content: center;
   @media (max-width: 768px) {
     flex-wrap: wrap;
     justify-content: center;
   }
 `;
 
-export const SliderWrapper = styled.div``;
+export const SliderWrapper = styled.div`
+  margin-top: 70px;
+  margin-bottom: 70px;
+`;
 
 export const ProductDataContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-left: 50px;
+  margin-right: 30px;
+  margin-top: 100px;
 `;
 export const ProductName = styled.h3`
   font-style: normal;
@@ -114,7 +122,7 @@ export const ProductSizeBox = styled.div<IProductBoxColorProps>`
   }
 `;
 
-export const ProductButton = styled.a`
+export const ProductButton = styled.button`
   font-weight: 400;
   font-size: 20px;
   line-height: 130%;
@@ -126,9 +134,12 @@ export const ProductButton = styled.a`
   border: 1px solid #000000;
   margin-top: 30px;
   align-self: flex-start;
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
+  pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
   &:hover {
     background-color: #ffffff;
     color: #000000;
+    cursor: pointer;
   }
 `;
 

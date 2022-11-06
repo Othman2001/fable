@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  margin-top: 20px;
+`;
 export const Title = styled.h2`
   text-align: center;
   font-style: normal;
   font-weight: 500;
-  font-size: 46px;
+  font-size: 30px;
   line-height: 140%;
   color: #080b13;
   flex: none;
@@ -22,9 +25,22 @@ export const FlexContainer = styled.div`
 export const categoryTitle = styled.p`
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 130%;
   color: #080b13;
 `;
 
-export const Sorting = styled.div``;
+export const Sorting = styled.div`
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+`;
+
+export const SortingType = styled.span`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #707070;
+  opacity: 0.6;
+`;

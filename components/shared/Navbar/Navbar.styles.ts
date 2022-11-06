@@ -6,15 +6,18 @@ interface IActiveProps {
 
 export const NavbarContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  margin-right: 21px;
+  margin-left: -58px;
+
   @media (max-width: 768px) {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 `;
 
 export const LogoWrapper = styled.div`
-  height: 60px;
+  height: 77px;
 `;
 
 export const ListWrapper = styled.ul<IActiveProps>`

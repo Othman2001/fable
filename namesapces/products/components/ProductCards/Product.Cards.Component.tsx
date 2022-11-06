@@ -1,5 +1,4 @@
 import * as Styles from "./ProductCards.Styles";
-import jacket from "../../../../assets/images/jacket.png";
 import Image from "next/image";
 import Link from "next/link";
 import { IProduct } from "../../store/types";
@@ -11,7 +10,7 @@ interface ICardProps {
 export default function Cards({ products }: ICardProps) {
     return (
         <Styles.CardsContainer>
-            {products.map((product) => {
+            {products?.map((product) => {
                 return (
                     <Styles.Card>
                         <Styles.CardImage>
@@ -21,12 +20,8 @@ export default function Cards({ products }: ICardProps) {
                                 <Image
                                     alt={product.name}
                                     src={product.imageUrl}
-                                    width={500}
-                                    height={500}
-                                    style={{
-                                        width: "100%",
-                                        height: "100%"
-                                    }}
+                                    width={350}
+                                    height={400}
 
                                 />
                             </Link>
@@ -34,7 +29,7 @@ export default function Cards({ products }: ICardProps) {
                         <Styles.ProductTitle>
                             {product.name}
                         </Styles.ProductTitle>
-                        <Styles.ProductPrice>$-{product.price} </Styles.ProductPrice>
+                        <Styles.ProductPrice>${product.price} </Styles.ProductPrice>
                     </Styles.Card>
                 )
             })}

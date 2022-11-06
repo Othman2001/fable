@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 export const LogoWrapper = styled.div`
   margin-top: 94px;
-  width: 321px;
+  width: 200px;
   margin-bottom: 32px;
   margin: 94px auto 0px;
 `;

@@ -1,8 +1,7 @@
+import '../styles/globals.css'
 import 'swiper/css';
 import "antd/dist/antd.css"
-import '../styles/globals.css'
-import ProductWrapper from "../StoreWrapper";
-import { store } from "../store";
+
 
 import type { AppProps } from 'next/app'
 import StoreWrapper from '../StoreWrapper';

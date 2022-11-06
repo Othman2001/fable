@@ -2,6 +2,10 @@
 @import url("swiper/css/navigation");
 @import url("swiper/css/pagination");
 
+:root {
+  color-scheme: only light !important;
+}
+
 html,
 body {
   padding: 0;

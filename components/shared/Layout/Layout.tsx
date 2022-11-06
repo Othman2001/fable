@@ -9,8 +9,8 @@ export default function Layout({ children }: ILayoutProps) {
     return (
         <div
             style={{
-                marginLeft: "60px",
-                marginRight: "60px"
+                marginLeft: "55px",
+                marginRight: "30px"
             }}
         >
             <Navbar />

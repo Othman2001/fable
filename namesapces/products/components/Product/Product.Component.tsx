@@ -1,22 +1,23 @@
 import { useState } from "react";
+import { ICartItem } from "../../../cart/store/store";
 import { IProduct } from "../../store/types";
 import * as Styles from "./Product.Styles";
 import ProductSlider from "./ProductSilder.Component";
 
 interface IProductProps {
     product: IProduct | undefined;
+    addToCart: ({ product }: {
+        product: ICartItem;
+    }) => void
 }
 
-export default function Product({ product }: IProductProps) {
+export default function Product({ product, addToCart }: IProductProps) {
     const [selectedSize, setSelectedSize] = useState<string>("");
     const [selectedColor, setSelectedColor] = useState<string>("");
     return (
         <div>
             {product ? (
-                <Styles.siteMapWrapper>
-                    <Styles.SiteMapText>
-                        Classic - Jacket
-                    </Styles.SiteMapText>
+                <Styles.Container>
                     <Styles.ProductViewContainer>
                         <Styles.SliderWrapper>
                             <ProductSlider images={product.images} />
@@ -55,7 +56,26 @@ export default function Product({ product }: IProductProps) {
                                 </Styles.ProductSizeBoxContainer>
                             </Styles.ColumnWrapper>
                             <Styles.Center>
-                                <Styles.ProductButton>
+                                <Styles.ProductButton
+                                    disabled={(selectedSize && selectedColor) ? false : true}
+                                    onClick={() => {
+                                        addToCart({
+                                            product: {
+                                                quantity: 1,
+                                                category: product.category,
+                                                colors: product.colors,
+                                                id: product.id,
+                                                images: product.images,
+                                                imageUrl: product.imageUrl,
+                                                name: product.name,
+                                                price: product.price,
+                                                sizes: product.sizes,
+                                                selectedColor,
+                                                selectedSize
+                                            }
+                                        })
+                                    }}
+                                >
                                     Add To Cart
                                 </Styles.ProductButton>
                             </Styles.Center>
@@ -64,7 +84,7 @@ export default function Product({ product }: IProductProps) {
                             </Styles.ProductDescription>
                         </Styles.ProductDataContainer>
                     </Styles.ProductViewContainer>
-                </Styles.siteMapWrapper>
+                </Styles.Container>
             ) : (
                 <>
                     <h1> loading</h1>

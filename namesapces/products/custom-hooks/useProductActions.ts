@@ -3,7 +3,6 @@ import {
   productsLoading,
 } from "../store/feats/productsSlice/";
 import { useDispatch } from "react-redux";
-import { IProduct } from "../store/types";
 import { productsApi } from "../services/api/prouctsApi";
 
 export const useProductActions = () => {

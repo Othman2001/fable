@@ -8,7 +8,7 @@ import { GetColorName } from 'hex-color-to-color-name';
 interface IDrawerProps {
     itemsInCart: ICartItem[];
     drawerVisibility: boolean;
-    changeDrawerVisibilityAction: ({ drawerVisibility: drawerVisibility, }: {
+    changeDrawerVisibilityAction: ({ drawerVisibility }: {
         drawerVisibility: boolean;
     }) => void
 }

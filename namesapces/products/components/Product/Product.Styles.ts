@@ -23,9 +23,13 @@ export const ProductViewContainer = styled.div`
   gap: 30px;
   align-items: flex-start;
   justify-content: center;
+  margin-left: 60px;
+  margin-right: 60px;
   @media (max-width: 768px) {
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: 60px;
+    margin-right: 60px;
   }
 `;
 
@@ -40,6 +44,12 @@ export const ProductDataContainer = styled.div`
   margin-left: 50px;
   margin-right: 30px;
   margin-top: 100px;
+  padding-left: 100px;
+  padding-right: 117px;
+  @media (max-width: 768px) {
+    padding-left: 100px;
+    padding-right: 117px;
+  }
 `;
 export const ProductName = styled.h3`
   font-style: normal;

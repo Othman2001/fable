@@ -14,6 +14,7 @@ const customJestConfig = {
 
     "^@/pages/(.*)$": "<rootDir>/pages/$1",
   },
+  transformIgnorePatterns: ["/node_modules/(?!my-package)(.*)"],
   testEnvironment: "jest-environment-jsdom",
 };
 

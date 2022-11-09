@@ -14,8 +14,8 @@ const products: IProduct[] = [{
     name: "jacketKlsBlack",
     colors: ["#fff", "#000"],
     id: "aed232",
-    images: ["image 1 ", "imagee2"],
-    imageUrl: "",
+    images: ["https://firebasestorage.googleapis.com/v0/b/fable-b9dfa.appspot.com/o/products%2Fjackets%2FJacketKlsBrown%2FJacketKlsBrown.png?alt=media&token=55c3e8e7-95ed-4fbd-b33a-c459b2cfe314 ", "https://firebasestorage.googleapis.com/v0/b/fable-b9dfa.appspot.com/o/products%2Fjackets%2FJacketKlsYellow%2FJacketKlsYellow.png?alt=media&token=f867714d-e4ac-43a9-9ffe-e57203853529"],
+    imageUrl: "https://firebasestorage.googleapis.com/v0/b/fable-b9dfa.appspot.com/o/products%2Fjackets%2FJacketKlsBrown%2FJacketKlsBrown.png?alt=media&token=55c3e8e7-95ed-4fbd-b33a-c459b2cfe314",
     price: 200,
     sizes: ['sm', "xs"]
 }]

@@ -12,7 +12,7 @@ export default function Cards({ products }: ICardProps) {
         <Styles.CardsContainer>
             {products?.map((product) => {
                 return (
-                    <Styles.Card>
+                    <Styles.Card key={product.id}>
                         <Styles.CardImage>
                             <Link
                                 href={`product/${product.id}`}

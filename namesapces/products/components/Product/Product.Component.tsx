@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ICartItem } from "../../../cart/store/store";
 import { IProduct } from "../../store/types";
 import * as Styles from "./Product.Styles";
-// import ProductSlider from "./ProductSilder.Component";
+import ProductSlider from "./ProductSilder.Component";
 
 interface IProductProps {
     product: IProduct | undefined;
@@ -20,7 +20,7 @@ export default function Product({ product, addToCart }: IProductProps) {
                 <Styles.Container>
                     <Styles.ProductViewContainer>
                         <Styles.SliderWrapper>
-                            {/* <ProductSlider images={product.images} /> */}
+                            <ProductSlider images={product.images} />
                         </Styles.SliderWrapper>
                         <Styles.ProductDataContainer>
                             <Styles.ProductName>

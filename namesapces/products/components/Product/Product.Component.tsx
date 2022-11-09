@@ -35,6 +35,7 @@ export default function Product({ product, addToCart }: IProductProps) {
                                         product.colors.map((color, index) => {
                                             return (
                                                 <Styles.ProductColorBox
+                                                    data-testid={`color-${color}`}
                                                     onClick={() => { setSelectedColor(color) }}
                                                     isActive={selectedColor == color ? true : false}
                                                     color={color}
@@ -46,7 +47,7 @@ export default function Product({ product, addToCart }: IProductProps) {
                                 <Styles.ProductSizeBoxContainer>
                                     {product.sizes.map((size, index) => {
                                         return (
-                                            <Styles.ProductSizeBox onClick={() => { setSelectedSize(size) }}
+                                            <Styles.ProductSizeBox data-testid={`size-${size}`} onClick={() => { setSelectedSize(size) }}
                                                 isActive={selectedSize == size ? true : false}
                                                 key={index}>
                                                 {size}

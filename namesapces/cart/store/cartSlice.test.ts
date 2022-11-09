@@ -18,8 +18,8 @@ const cartItem: ICartItem = {
   selectedColor: "#000",
   selectedSize: "sm",
 };
-beforeEach(() => {
-  store.dispatch(clearCart);
+afterEach(() => {
+  store.dispatch(clearCart());
 });
 
 describe("ProductSlice Test", () => {
@@ -38,6 +38,6 @@ describe("ProductSlice Test", () => {
   it("Should incerment the quantity if the item is already in cart", () => {
     store.dispatch(addToCart(cartItem));
     store.dispatch(addToCart(cartItem));
-    expect(store.getState().cart.cart[0].quantity).toBe(3);
+    expect(store.getState().cart.cart[0].quantity).toBe(2);
   });
 });

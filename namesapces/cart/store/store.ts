@@ -52,6 +52,9 @@ export const cartSlice = createSlice({
     changeDrawerVisibility: (state, action: PayloadAction<boolean>) => {
       state.showCartDrawer = action.payload;
     },
+    clearCart: (state, action) => {
+      state.cart = [];
+    },
   },
 });
 
@@ -61,6 +64,7 @@ export const {
   incrementQuantity,
   removeItem,
   changeDrawerVisibility,
+  clearCart,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

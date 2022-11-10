@@ -20,7 +20,7 @@ interface ICheckoutProps {
     getTotal: () => number
 }
 
-export default function Checkout({ cartItems, decrement, increment, removeItem, getTotal }: ICheckoutProps) {
+export default function Checkout({ cartItems, decrement, increment, removeItem }: ICheckoutProps) {
     return (
         <>
             {cartItems.length == 0 ? (

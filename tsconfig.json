@@ -15,6 +15,9 @@
     "jsx": "preserve",
     "incremental": true
   },
+  "jest": {
+    "transformIgnorePatterns": ["node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"]
+  },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

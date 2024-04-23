@@ -6,6 +6,7 @@ export default function Checkout() {
         <Layout>
             <CheckoutComponent />
             <h1> New Checkout text</h1>
+            <h2> new checkout components s</h2>
         </Layout>
     )
 }
